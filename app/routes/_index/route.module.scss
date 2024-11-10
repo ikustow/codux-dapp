@@ -1,0 +1,18 @@
+.root {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-primary);
+    background-image: none;
+    min-width: 100vw;
+}
+.internal {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: start;
+    padding: 20px;
+}

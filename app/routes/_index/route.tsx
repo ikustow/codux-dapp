@@ -1,29 +1,22 @@
-import classNames from 'classnames';
 import styles from './_index.module.scss';
 import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
-import commonStyles from '~/styles/common-styles.module.scss';
+
 import { getUrlOriginWithPath } from '~/utils';
-import TypescriptSvg from '../../../src/assets/svg/typescript.svg';
-import ViteSvg from '../../../src/assets/svg/vite.svg';
+import styles0 from './route.module.scss';
+import errorComponentStyles from '../../../src/components/error-component/error-component.module.scss';
+import classNames from 'classnames';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
 };
 
 export default function HomePage() {
+    const value: string = import.meta.env.VITE_SOME_VALUE;
+    console.log(value);
+
     return (
-        <div className={styles.root}>
-            <h2 className={styles.title}>Welcome to your App Homepage 🎉</h2>
-            <span>
-                Double click to edit App component
-                <br />
-                &amp; drag here elements from + Add <b>Elements</b> Panel
-            </span>
-            <p className={styles.paragraph}>
-                This project is using <img src={ViteSvg} width="12" />+
-                <img src={TypescriptSvg} width="12" />
-                Visit vitejs.dev to learn more.{' '}
-            </p>
+        <div className={styles0.root}>
+            <div className={styles0.internal} />
         </div>
     );
 }

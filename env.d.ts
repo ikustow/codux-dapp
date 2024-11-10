@@ -17,6 +17,7 @@ declare module 'raw-loader!.*' {
 
 interface ImportMetaEnv {
     readonly VITE_WIX_CLIENT_ID: string;
+    readonly VITE_SOME_VALUE: string;
     // more env variables...
 }
 
