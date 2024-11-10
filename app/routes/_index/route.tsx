@@ -1,29 +1,47 @@
-import styles from './_index.module.scss';
 import { LinksFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';
-
 import { getUrlOriginWithPath } from '~/utils';
 import styles0 from './route.module.scss';
-import errorComponentStyles from '../../../src/components/error-component/error-component.module.scss';
-import classNames from 'classnames';
+import LogoPng from '../../../src/assets/img/logo.png';
+import { TonButtonCoduxComponent } from '../../../src/components/ton-button-codux-component/ton-button-codux-component';
+import { MadeWithImagesRow } from '../../../src/components/made-with-images-row/made-with-images-row';
+import { useTonWallet } from '@tonconnect/ui-react';
+import { useNavigate } from '@remix-run/react';
+import { useEffect } from 'react';
 
 export const loader = ({ request }: LoaderFunctionArgs) => {
     return { canonicalUrl: getUrlOriginWithPath(request.url) };
 };
 
 export default function HomePage() {
-    const value: string = import.meta.env.VITE_SOME_VALUE;
-    console.log(value);
+
+    const wallet = useTonWallet();
+
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (wallet) {
+            navigate('/DonatesPage');
+        }
+    }, [wallet, navigate]);
 
     return (
         <div className={styles0.root}>
-            <div className={styles0.internal} />
+            <div className={styles0.internal}>
+                <h1 className={styles0['main-title']}>DonApp</h1>
+                <img src={LogoPng} className={styles0.logo} alt={'logo'} />
+                <div className={styles0['button-ton']}>
+                    <TonButtonCoduxComponent />
+                </div>
+                <h2 className={styles0.subtitle}>Made with</h2>
+                <MadeWithImagesRow />
+            </div>
         </div>
     );
 }
 
 export const meta: MetaFunction<typeof loader> = ({ data }) => {
-    const title = 'Blank Starter';
-    const description = 'Welcome to the Blank Starter';
+    const title = 'DonApp';
+    const description = 'Welcome to the DonApp';
     const imageUrl = 'https://website-starter.com/og-image.png';
 
     return [

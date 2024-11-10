@@ -1,0 +1,21 @@
+@import '../../../src/styles/theme.module.scss';
+
+.root {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.ton {
+    height: 40px;
+    width: 40px;
+}
+.codux {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
+.firebase {
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}

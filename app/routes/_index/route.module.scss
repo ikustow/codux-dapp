@@ -12,7 +12,32 @@
     width: 100vw;
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    align-content: start;
     justify-content: start;
     padding: 20px;
+    align-items: center;
+}
+.main-title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: Courier, monospace;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+.logo {
+    height: 260px;
+    width: 260px;
+}
+.button-ton {
+    padding-top: 32px;
+}
+.subtitle {
+    color: #ffffff;
+    font-family: Courier, monospace;
+    font-size: 22px;
+    font-weight: 600;
+    padding-top: 16px;
+    padding-bottom: 16px;
 }

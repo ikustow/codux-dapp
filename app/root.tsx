@@ -9,6 +9,8 @@ import {
 } from '@remix-run/react';
 import { ErrorComponent } from '~/components/error-component/error-component';
 import '~/styles/index.scss';
+import { TonConnectUIProvider } from '@tonconnect/ui-react';
+
 
 export function Layout({ children }: { children: React.ReactNode }) {
     return (
@@ -31,7 +33,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
     return (
         <div id="root">
-            <Outlet />
+          <TonConnectUIProvider manifestUrl="https://ton-connect.github.io/demo-dapp-with-wallet/tonconnect-manifest.json">
+              <Outlet />
+            </TonConnectUIProvider>
         </div>
     );
 }
