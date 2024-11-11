@@ -13,8 +13,27 @@
     font-family: Courier, monospace;
     font-weight: 700;
     font-size: 26px;
-    padding: 20px;
+    padding: 40px 20px 20px;
 }
 .button {
-    padding: 16px;
+    padding: 40px 16px 16px;
+}
+.gridComponent {
+}
+.grid {
+    padding-top: 40px;
+}
+.donate-button {
+    color: var(--button-foreground);
+    background-color: #008dfb;
+    border-radius: 20px;
+    opacity: 1;
+    width: 120px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.div1 {
+    padding-top: 36px;
 }

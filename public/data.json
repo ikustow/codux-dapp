@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "Charity",
+    "description": "Description of item 1",
+    "image": "/assets/image1.png"
+  },
+  {
+    "id": 2,
+    "title": "Pets",
+    "description": "Description of item 2",
+    "image": "/assets/image2.png"
+  },
+  {
+    "id": 3,
+    "title": "Health",
+    "description": "Description of item 3",
+    "image": "/assets/image3.png"
+  },
+  {
+    "id": 4,
+    "title": "Sport",
+    "description": "Description of item 4",
+    "image": "/assets/image4.png"
+  }
+]
