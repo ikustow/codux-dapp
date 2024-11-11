@@ -13,16 +13,14 @@ export const loader = ({ request }: LoaderFunctionArgs) => {
 };
 
 export default function HomePage() {
-
     const wallet = useTonWallet();
-
     const navigate = useNavigate();
 
-    useEffect(() => {
-        if (wallet) {
-            navigate('/DonatesPage');
-        }
-    }, [wallet, navigate]);
+    if (wallet ) {
+        // Устанавливаем флаг, чтобы предотвратить повторное выполнение
+        navigate('/DonatesPage');
+    }
+
 
     return (
         <div className={styles0.root}>

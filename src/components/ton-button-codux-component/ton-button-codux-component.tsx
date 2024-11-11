@@ -1,6 +1,6 @@
-import { TonConnectButton } from '@tonconnect/ui-react';
-import styles from './ton-button-codux-component.module.scss';
-import cx from 'classnames';
+import { TonConnectButton, useTonWallet } from '@tonconnect/ui-react';
+import { useNavigate } from '@remix-run/react';
+
 
 export interface TonButtonCoduxComponentProps {
     className?: string;
@@ -10,8 +10,9 @@ export interface TonButtonCoduxComponentProps {
  * This component was created using Codux's Default new component template.
  * To create custom component templates, see https://help.codux.com/kb/en/article/kb16522
  */
-export const TonButtonCoduxComponent = ({ className }: TonButtonCoduxComponentProps) => {
-    return (       
+export const TonButtonCoduxComponent = () => {
+
+    return (
              <TonConnectButton />  
     );
 };
