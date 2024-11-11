@@ -11,6 +11,9 @@ Transaction Submission — Sending a blockchain transaction with additional info
 ![img.png](src/assets/readmeInfo/img.png)
     
 ## Auth with Ton wallet
+
+![auth.gif](src/assets/readmeInfo/auth.gif)
+
 Authentication is implemented using integration with TON, allowing users to sign in with their TON wallet. This functionality includes:
 
 Connecting to the user's wallet through the TON interface.
@@ -18,6 +21,7 @@ Verifying the presence of the required wallet and TON account.
 Securely storing the user's session token on the client side for further operations.
 Upon successful authorization, the user gains access to the transaction interface, where they can interact with the system based on their authenticated status.
 ## Transaction sending
+![trx.gif](src/assets/readmeInfo/trx.gif)
 
 The primary purpose of this section is to demonstrate the submission of a transaction to the TON blockchain with support for additional parameters.
 
