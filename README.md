@@ -4,8 +4,8 @@ This project serves as a Proof of Concept (PoC) to evaluate the capabilities of 
 
 The project demonstrates two key features:
 
-Authentication — Secure user connection to the dApp.
-Transaction Submission — Sending a blockchain transaction with additional information in the form of a comment.
+* Authentication — Secure user connection to the dApp.
+* Transaction Submission — Sending a blockchain transaction with additional information in the form of a comment.
 
 
 ![img.png](src/assets/readmeInfo/img.png)
